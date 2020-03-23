@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Boston Maids</title>
+</head>
+<body>
+    <style>
+   .btns {
+
+    display: flex;
+     margin-bottom: 50px;
+
+   }
+
+    #numb{
+        
+        text-align: center;
+		font-size: larger;
+        border: 1px solid #3333;
+    }
+    .btn {
+    color: blue;
+	font-size: larger;
+	border-radius: 3px;
+    opacity: 0.8;
+    }
+    
+
+    </style>
+    <h1>Boston Maids</h1>
+<!-- 
+    <div class="number-input">
+        <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button>
+        <input class="quantity" min="0" max="8" name="quantity" value="0" type="number">
+        <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+        <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+        <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" ></button> -->
+        <div class="form-style-10">
+            <h1>Sign Up Now!<span>Sign up and tell us what you think of the site!</span></h1>
+            <form>
+                <div class="section"><span>1</span>First Name & Address</div>
+                <div class="inner-wrap">
+                    <label>Your Full Name <input type="text" name="field1" /></label>
+                    <label>Address <textarea name="field2"></textarea></label>
+                </div>
+            
+                <div class="section"><span>2</span>Email & Phone</div>
+                <div class="inner-wrap">
+                    <label>Email Address <input type="email" name="field3" /></label>
+                    <label>Phone Number <input type="text" name="field4" /></label>
+                </div>
+            
+                <div class="section"><span>3</span>Passwords</div>
+                    <div class="inner-wrap">
+                    <label>Password <input type="password" name="field5" /></label>
+                    <label>Confirm Password <input type="password" name="field6" /></label>
+				</div>
+
+				<label for="button">Bathrooms</label>
+				<div class="btns">
+          
+                    
+					<button type="button" class="btn" name="button" onclick="decrementValue()">-</button>
+					<input id="numb" type="text" min="0" max="8" value="0">
+					<button type="button" class="btn" onclick="incrementValue()">+</button>
+				</div>
+                <div class="button-section">
+                 <input type="submit" name="Sign Up" />
+                 <span class="privacy-policy">
+                 <input type="checkbox" name="field7">You agree to our Terms and Policy. 
+                 </span>
+                </div>
+            </form>
+            </div>
+      </div>
+      
+      
+</body>
+<script>
+  function incrementValue(e)
+{  
+    var value = parseInt(document.getElementById('numb').value, 10);
+    value = isNaN(value) ? 0 : value;
+     if (value === 8) {return 8}
+     else {value++;
+	 
+     }
+   
+   
+    document.getElementById('numb').value = value;
+    
+}
+
+function decrementValue()
+{
+    var value = parseInt(document.getElementById('numb').value, 10);
+    value = isNaN(value) ? 0 : value;
+    if( value === 0) {return 0}
+     else {
+        value--;
+     }
+    
+    document.getElementById('numb').value = value;
+}
+</script>
+</html>
